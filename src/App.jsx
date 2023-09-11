@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './Pages/Homepage';
 import MovieDetails from './components/MovieDetails';
 import SearchBar from './components/SearchBar';
@@ -25,7 +25,7 @@ function App() {
         <section className=' w-[20.3rem] text-white mt-[6rem] ml-[5rem]'>
           <h2 className=' text-[2.4rem] font-[600]'>John wick 3: Parabellum </h2>
           <p>John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
-        <img src={youtube} alt="youtube" />
+        <Link to={"https://www.google.com/search?sca_esv=564389839&sxsrf=AB5stBg1ERzbOfNNxA7uesoEBFRDNp-zsw:1694450206188&q=john+wick+3+movie+thriller&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjcj4T1_qKBAxWCUkEAHdFmD0sQ0pQJegQIDRAB&biw=1920&bih=955&dpr=1#fpstate=ive&vld=cid:baf0d1f7,vid:M7XM597XO94,st:0"}><img src={youtube} alt="youtube" /></Link>
         </section>
         </header>
         
