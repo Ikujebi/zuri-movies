@@ -1,0 +1,13 @@
+.logo{
+    width: 15rem;
+    display: flex;
+    margin: auto;
+}
+.image{
+    width: 100%;
+    
+}
+
+.App{
+    margin: 30px;
+}
