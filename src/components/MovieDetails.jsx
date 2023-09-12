@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 
-function MovieDetails({ movieId }) {
+function MovieDetails() {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
   const [loading, setLoading] = useState(true);
@@ -39,7 +39,7 @@ function MovieDetails({ movieId }) {
       <p data-testid="movie-release-date">{movieDetails.release_date}</p>
       <p data-testid="movie-runtime">{movieDetails.runtime} minutes</p>
       <p data-testid="movie-overview">{movieDetails.overview}</p>
-      <MovieCard />
+      <MovieCard movie={setMovieDetails}/>
     </div>
   );
 }

@@ -7,6 +7,8 @@ import ErrorMessage from './components/ErrorMessage';
 import tv from './images/tv.png'
 import menu from './images/Menu.png'
 import youtube from './images/Button.png'
+import seeMore from './images/See more.png'
+
 
 function App() {
   return (
@@ -28,11 +30,14 @@ function App() {
         <Link to={"https://www.google.com/search?sca_esv=564389839&sxsrf=AB5stBg1ERzbOfNNxA7uesoEBFRDNp-zsw:1694450206188&q=john+wick+3+movie+thriller&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjcj4T1_qKBAxWCUkEAHdFmD0sQ0pQJegQIDRAB&biw=1920&bih=955&dpr=1#fpstate=ive&vld=cid:baf0d1f7,vid:M7XM597XO94,st:0"}><img src={youtube} alt="youtube" /></Link>
         </section>
         </header>
-        
+        <div className=' flex justify-between'> 
+          <h2 className=' text-[1.3rem] font-medium'>Featured Movie</h2>
+            <img className=' mt-1' src={seeMore} alt="seeMore" />
+        </div>
         <div className=' mx-auto mt-4 flex '>
         <Routes>
-          <Route path="/"  component={Home} element={<Home/>} />
-          <Route path="/movies/:id" component={MovieDetails} element={<MovieDetails/>}/>
+          <Route path="/"  element={<Home/>} />
+          <Route path="/movies/:id"  element={<MovieDetails/>}/>
         </Routes>
         </div>
       </div>
