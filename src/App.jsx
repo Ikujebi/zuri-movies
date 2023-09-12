@@ -5,7 +5,7 @@ import MovieDetails from './components/MovieDetails';
 import SearchBar from './components/SearchBar';
 import ErrorMessage from './components/ErrorMessage';
 import tv from './images/tv.png'
-import menu from './images/menu.png'
+import menu from './images/Menu.png'
 import youtube from './images/Button.png'
 
 function App() {
