@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <div className="container1 mx-auto">
-        <header className=" bg-[url('./images/poster.png')] h-[50svh]">
+        <header className=" bg-[url('./images/Poster.png')] h-[50svh]">
         <div className="   flex justify-around" >
           <div className=' flex gap-[3rem]'> <div className=' h-[3rem] '><img src={tv} alt="tv" /></div>
           <h1 className=" text-[1.6rem]    text-white ">MovieBox </h1>
