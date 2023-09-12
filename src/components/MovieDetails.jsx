@@ -39,7 +39,10 @@ function MovieDetails() {
   }, [id]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return ( <div className=' flex justify center align-center'>
+      <div>Loading...</div></div>
+    
+    );
   }
 
 
@@ -74,10 +77,10 @@ function MovieDetails() {
           </div> 
           <div>
             <img src={star} alt="star" />
-           {/*  {movieDetails.vote_average} */}
+           {movieDetails.vote_average.slice(0,4)}
           </div>
           </section>
-          <p data-testid="movie-overview">{movieDetails.overview.slice(0,2)}</p>
+          <p data-testid="movie-overview">{movieDetails.overview}</p>
         </div></div>
     </div>
   );
