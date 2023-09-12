@@ -49,7 +49,7 @@ function MovieDetails() {
   const backdropUrl = `https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`;
   return (
     <div className=' flex '>
-      <nav className=' block h-[99.8svh]  mr-[4rem] w-full md:w-1/4 shadow-slate-400 shadow-lg p-4 rounded-e-3xl md:w-[22%]'>
+      <nav className=' block h-[99.8svh] mr-[2rem]    shadow-slate-400 shadow-lg p-4 pr-[2.9rem] rounded-e-3xl '>
         <header className=' mt-[2rem] flex gap-2 mb-[5.9rem]'><img src={tv} className=' h-[3.4rem] p-2' alt="tv" /> <h1 className=' pt-[.7rem] text-2xl md:mr-7 font-md'>MovieBox</h1></header>
         <Link to={'/'}><div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={home} alt="home" /><h2 className=' text-[1.12rem]'>Home</h2></div></Link>
         <div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={movie} alt="home" /><h2 className=' text-[1.12rem]'>Movies</h2></div>
@@ -63,10 +63,10 @@ function MovieDetails() {
         <div className=' flex gap-3 mt-[4rem] ml-[.7rem]'><img src={logout} alt="logout" /><h2 className=' text-[1.12rem]'>Logout</h2></div>
       </nav>
       <div>
-        <div className=' mt-[1rem] w-full md:w-3/4 rounded-md'>
+        <div className=' mt-[1rem] w-[65%] md:w-3/4 rounded-md'>
           <img src={backdropUrl} className=' h-[50svh] w-full rounded-md' alt="img" />
         </div>
-        <div className=' w-[70%]'>
+        <div className=' w-[65%]'>
           <section className=' flex justify-between'>
           <div className=' flex gap-1'>
           <h2 data-testid="movie-title" className='text-lg text-2xl font-medium whitespace-no-wrap overflow-hidden overflow-ellipsis max-w-full'>{movieDetails.title} </h2>
@@ -75,9 +75,10 @@ function MovieDetails() {
           <button className=' ml-[2.5rem] shadow-xl h-[2rem] text-[#B91C1C] rounded-xl p-1 text-[1rem] font-medium'>{movieDetails.genres[0].name}</button>
           <button className=' shadow-xl h-[2rem] text-[#B91C1C]  rounded-xl p-1 text-[1rem] font-medium'>{movieDetails.genres[1].name}</button>
           </div> 
-          <div>
+          <div className=' flex'>
             <img src={star} alt="star" />
-           {movieDetails.vote_average.slice(0,4)}
+            <p data-testid="movie-rating"> {String(movieDetails.vote_average).slice(0, 4)}</p>
+
           </div>
           </section>
           <p data-testid="movie-overview">{movieDetails.overview}</p>
