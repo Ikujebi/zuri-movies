@@ -7,6 +7,7 @@ import home from '../images/Home.png'
 import tvicon from '../images/TV Show.png'
 import calender from '../images/Calendar.png'
 import logout from '../images/Logout.png'
+import star from '../images/Star.png'
 import { Link } from 'react-router-dom';
 
 
@@ -63,14 +64,20 @@ function MovieDetails() {
           <img src={backdropUrl} className=' h-[50svh] w-full rounded-md' alt="img" />
         </div>
         <div className=' w-[70%]'>
+          <section className=' flex justify-between'>
           <div className=' flex gap-1'>
           <h2 data-testid="movie-title" className='text-lg text-2xl font-medium whitespace-no-wrap overflow-hidden overflow-ellipsis max-w-full'>{movieDetails.title} </h2>
           <p data-testid="movie-release-date" className=' text-[1.2rem] font-medium'> . {movieDetails.release_date.slice(0, 4)}</p>
           <p data-testid="movie-runtime" className=' text-[1.2rem] font-medium'>. {`${Math.floor(movieDetails.runtime / 60)}h ${(Math.ceil((movieDetails.runtime % 60) * 100) / 100).toFixed(2)}m`} </p>
           <button className=' ml-[2.5rem] shadow-xl h-[2rem] text-[#B91C1C] rounded-xl p-1 text-[1rem] font-medium'>{movieDetails.genres[0].name}</button>
           <button className=' shadow-xl h-[2rem] text-[#B91C1C]  rounded-xl p-1 text-[1rem] font-medium'>{movieDetails.genres[1].name}</button>
+          </div> 
+          <div>
+            <img src={star} alt="star" />
+           {/*  {movieDetails.vote_average} */}
           </div>
-          <p data-testid="movie-overview">{movieDetails.overview}</p>
+          </section>
+          <p data-testid="movie-overview">{movieDetails.overview.slice(0,2)}</p>
         </div></div>
     </div>
   );
