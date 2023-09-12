@@ -10,9 +10,12 @@ function MovieDetails({ movieId }) {
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
+
       try {
+        const movieApi =  import.meta.env.VITE_REACT_APP_ZURI_MOVIES_API;
+        const apiToken = import.meta.env.VITE_API_TOKEN_MY_API;
         const response = await axios.get(
-          `https://api.themoviedb.org/3/movie/top_rated/${id}?api_key=2a50ccf63fc42a8331808d433b58dd14`
+          `${movieApi}/${id}?api_key=${apiToken}`
         );
         console.log(response.data);
         setMovieDetails(response.data);

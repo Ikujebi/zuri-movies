@@ -8,14 +8,15 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch top 10 movies from the TMDB API
+    const movieApi =  import.meta.env.VITE_REACT_APP_ZURI_MOVIES_API;
+    const apiToken = import.meta.env.VITE_API_TOKEN_MY_API;
     const fetchTopMovies = async () => {
       try {
         const response = await axios.get(
-          'https://api.themoviedb.org/3/movie/top_rated',
+          movieApi,
           {
             params: {
-              api_key: '2a50ccf63fc42a8331808d433b58dd14',
+              api_key: apiToken,
               language: 'en-US',
               page: 1,
             },
