@@ -9,10 +9,11 @@ function MovieCard({ movie }) {
         <img data-testid="movie-poster" className="w-full" src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
       </Link>
       <div className="px-6 py-4">
+      <p data-testid="movie-release-date" className="text-gray-600 text-sm">{movie.release_date}</p>
         <Link to={`/movies/${movie.id}`}>
           <div data-testid="movie-title" className="font-bold text-xl mb-2">{movie.title}</div>
         </Link>
-        <p data-testid="movie-release-date" className="text-gray-600 text-sm">{movie.release_date}</p>
+        
       </div>
     </div>
   );
