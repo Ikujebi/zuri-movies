@@ -19,6 +19,9 @@ function Home() {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searched, setSearched] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+  const initialCardCount = 10;
+  const [cardCount, setCardCount] = useState(initialCardCount); 
 
   useEffect(() => {
     const movieApi =  import.meta.env.VITE_REACT_APP_ZURI_MOVIES_API;
@@ -67,8 +70,8 @@ function Home() {
 
   return (
     <>
-    <div className="container1 mx-auto">
-        <header className=" bg-[url('./images/Poster.png')] h-[50svh]">
+    <div className="container1 w-[100%]">
+        <header className=" bg-[url('./images/Poster.png')] w-full h-[50svh]">
         <div className="   flex justify-around" >
           <div className=' flex gap-[3rem]'> <div className=' h-[3rem] '><img src={tv} alt="tv" /></div>
           <h1 className=" text-[1.6rem]    text-white ">MovieBox </h1>
@@ -84,13 +87,16 @@ function Home() {
         <Link to={"https://www.google.com/search?sca_esv=564389839&sxsrf=AB5stBg1ERzbOfNNxA7uesoEBFRDNp-zsw:1694450206188&q=john+wick+3+movie+thriller&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjcj4T1_qKBAxWCUkEAHdFmD0sQ0pQJegQIDRAB&biw=1920&bih=955&dpr=1#fpstate=ive&vld=cid:baf0d1f7,vid:M7XM597XO94,st:0"}><img src={youtube} alt="youtube" /></Link>
         </section>
         </header>
+        <div className=" w-[96%] mx-auto">
         <div className=' mt-[1.99rem] mx-auto flex justify-between'> 
           <h2 className=' text-[1.3rem] font-medium'>Featured Movie</h2>
-            <img className=' mt-1' src={seeMore} alt="seeMore" />
+            <img className=' mt-1' src={seeMore} alt="seeMore"
+           onClick={() => setCardCount(cardCount + initialCardCount)}
+            />
         </div>
         {!searched ? (
     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mx-auto">
-      {topMovies.map((movie) => (
+      {topMovies.slice(0, showAll ? topMovies.length : cardCount).map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
     </div>):null}
@@ -123,6 +129,7 @@ function Home() {
         <p>{'\u00a9'}{year} MovieBox designed by Adriana Eka Prayudha</p>
       </div>
     </footer>
+    </div>
     </div>
     
     </>
