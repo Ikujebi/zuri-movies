@@ -66,7 +66,7 @@ function Home() {
   const year = date.getFullYear()
 
   if (loading) {
-    return <div className=' flex justify-center items-center mt-[45%]'>
+    return <div className=' flex justify-center items-center mt-[30rem]'>
       <div>
       <Spin size="large" />  Loading...
       </div></div>;
