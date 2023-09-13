@@ -42,7 +42,7 @@ function MovieDetails() {
   }, [id]);
 
   if (loading) {
-    return (<div className=' flex justify center align-center'>
+    return (<div className=' flex justify center align-center mx-auto'>
       <div>Loading...</div></div>
 
     );
