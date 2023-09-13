@@ -1,5 +1,5 @@
 // Home.js
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import MovieCard from '../components/MovieCard'; // Import the MovieCard component
 import axios from 'axios';
 import SearchBar from '../components/SearchBar';
@@ -16,7 +16,9 @@ import { Link } from 'react-router-dom'
 
 function Home() {
   const [topMovies, setTopMovies] = useState([]);
+  const [filteredMovies, setFilteredMovies] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searched, setSearched] = useState(false);
 
   useEffect(() => {
     const movieApi =  import.meta.env.VITE_REACT_APP_ZURI_MOVIES_API;
@@ -44,6 +46,17 @@ function Home() {
 
     fetchTopMovies();
   }, []);
+  // Initialize with all movies
+
+  // Define a function to handle the search
+  const handleSearch = (query) => {
+    // Filter the movies based on the search query
+    const filtered = topMovies.filter((movie) =>
+      movie.title.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredMovies(filtered);
+    setSearched(true);
+  };
 
   const date = new Date()
   const year = date.getFullYear()
@@ -61,7 +74,7 @@ function Home() {
           <h1 className=" text-[1.6rem]    text-white ">MovieBox </h1>
           </div>
         
-        <SearchBar />
+        <SearchBar  onSearch={handleSearch}/>
         <div><img src={menu} alt="signIn" /></div>
         <ErrorMessage />
         </div>
@@ -75,11 +88,24 @@ function Home() {
           <h2 className=' text-[1.3rem] font-medium'>Featured Movie</h2>
             <img className=' mt-1' src={seeMore} alt="seeMore" />
         </div>
+        {!searched ? (
     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mx-auto">
       {topMovies.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
-    </div>
+    </div>):null}
+    <div className=' flex flex-col justify-center items-center '>
+    <h2 className=' mt-6 text-2xl mb-3'>Searched Movies</h2>
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mx-auto"> 
+     
+        {filteredMovies.length > 0 ? ( // Check if there are filtered movies
+          filteredMovies.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))
+        ) : (
+          <div>No movies found.</div>
+        )}
+      </div></div>
     <footer className=' text-black flex flex-col items-center mt-[3rem]'>
       <div className='flex gap-5'>
         <img src={facebook} alt="facebook" />
