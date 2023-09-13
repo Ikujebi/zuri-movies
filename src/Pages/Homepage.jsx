@@ -80,8 +80,8 @@ function Home() {
             <div className=' flex gap-[3rem]'> <div className=' h-[3rem] '><img src={tv} alt="tv" /></div>
               <h1 className=" text-[1.6rem]    text-white ">MovieBox </h1>
             </div>
-
-            <SearchBar onSearch={handleSearch} />
+              <div className=' mt-1'> 
+            <SearchBar onSearch={handleSearch} /></div>
             <div><img src={menu} alt="signIn" /></div>
             <ErrorMessage />
           </div>
