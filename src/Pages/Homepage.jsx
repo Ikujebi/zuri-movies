@@ -7,6 +7,10 @@ import ErrorMessage from '../components/ErrorMessage';
 import tv from '../images/tv (1).png'
 import menu from '../images/Menu.png'
 import youtube from '../images/Button.png'
+import youtubeicon from '../images/fa-brands_youtube.png'
+import facebook from '../images/Vector.png'
+import twiter from '../images/fa-brands_twitter.png'
+import instagram from '../images/fa-brands_instagram.png'
 import seeMore from '../images/See more.png'
 import { Link } from 'react-router-dom'
 
@@ -41,6 +45,9 @@ function Home() {
     fetchTopMovies();
   }, []);
 
+  const date = new Date()
+  const year = date.getFullYear()
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -73,7 +80,25 @@ function Home() {
         <MovieCard key={movie.id} movie={movie} />
       ))}
     </div>
+    <footer className=' text-black flex flex-col items-center mt-[3rem]'>
+      <div className='flex gap-5'>
+        <img src={facebook} alt="facebook" />
+        <img src={instagram} alt="instagram" />
+        <img src={twiter} alt="twiter" />
+        <img src={youtubeicon} alt="youtubeicon" />
+      </div>
+      <div className=' mt-4 mb-4 flex gap-4 text-grey-900'>
+        <b>Conditions of use</b>
+        <b>Privacy & Policy</b>
+        <b>Press Room</b>
+      </div >
+      <div className=' text-gray-500 font-medium'>
+        <p className=' flex justify-center items-center mb-1'>{'\u00a9'}{year} MovieBox by Ikujebi Kehinde</p>
+        <p>{'\u00a9'}{year} MovieBox designed by Adriana Eka Prayudha</p>
+      </div>
+    </footer>
     </div>
+    
     </>
   );
 }

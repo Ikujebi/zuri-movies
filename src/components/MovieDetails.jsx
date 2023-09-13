@@ -39,9 +39,9 @@ function MovieDetails() {
   }, [id]);
 
   if (loading) {
-    return ( <div className=' flex justify center align-center'>
+    return (<div className=' flex justify center align-center'>
       <div>Loading...</div></div>
-    
+
     );
   }
 
@@ -68,20 +68,25 @@ function MovieDetails() {
         </div>
         <div className=' w-[65%]'>
           <section className=' flex justify-between'>
-          <div className=' flex gap-1'>
-          <h2 data-testid="movie-title" className='text-lg text-2xl font-medium whitespace-no-wrap overflow-hidden overflow-ellipsis max-w-full'>{movieDetails.title} </h2>
-          <p data-testid="movie-release-date" className=' text-[1.2rem] font-medium'> . {movieDetails.release_date.slice(0, 4)}</p>
-          <p data-testid="movie-runtime" className=' text-[1.2rem] font-medium'>. {`${Math.floor(movieDetails.runtime / 60)}h ${(Math.ceil((movieDetails.runtime % 60) * 100) / 100).toFixed(2)}m`} </p>
-          <button className=' ml-[2.5rem] shadow-xl h-[2rem] text-[#B91C1C] rounded-xl p-1 text-[1rem] font-medium'>{movieDetails.genres[0].name}</button>
-          <button className=' shadow-xl h-[2rem] text-[#B91C1C]  rounded-xl p-1 text-[1rem] font-medium'>{movieDetails.genres[1].name}</button>
-          </div> 
-          <div className=' flex'>
-            <img src={star} alt="star" />
-            <p data-testid="movie-rating"> {String(movieDetails.vote_average).slice(0, 4)}</p>
+            <div className=' flex gap-1'>
+              <h2 data-testid="movie-title" className='text-lg text-2xl font-medium whitespace-no-wrap overflow-hidden overflow-ellipsis max-w-full'>{movieDetails.title} </h2>
+              <p data-testid="movie-release-date" className=' text-[1.2rem] font-medium'> . {movieDetails.release_date.slice(0, 4)}</p>
+              <p data-testid="movie-runtime" className=' text-[1.2rem] font-medium'>. {`${Math.floor(movieDetails.runtime / 60)}h ${(Math.ceil((movieDetails.runtime % 60) * 100) / 100).toFixed(2)}m`} </p>
+              <button className=' ml-[2.5rem] shadow-xl h-[2rem] text-[#B91C1C] rounded-xl p-1 text-[1rem] font-medium'>{movieDetails.genres[0].name}</button>
+              <button className=' shadow-xl h-[2rem] text-[#B91C1C]  rounded-xl p-1 text-[1rem] font-medium'>{movieDetails.genres[1].name}</button>
+            </div>
+            <div className=' flex md:mt-1 gap-1'>
+              <img src={star} alt="star" className=' md:h-[1.5rem] ' />
+              <p data-testid="movie-rating"> {String(movieDetails.vote_average).slice(0, 3)}</p>
+              <p data-testid="movie-votecount">|  <span className=' md:ml-3 md:pb-[2rem]'> {String(movieDetails.vote_count).slice(0, 4)}</span> </p>
 
-          </div>
+            </div>
           </section>
-          <p data-testid="movie-overview">{movieDetails.overview}</p>
+          <div className=' w-[20rem] md:w-full mt-6'>
+
+            <p data-testid="movie-overview" >{movieDetails.overview}</p>
+          </div>
+
         </div></div>
     </div>
   );
