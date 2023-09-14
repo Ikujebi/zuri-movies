@@ -74,19 +74,19 @@ function Home() {
 
   return (
     <>
-      <div className="container1 w-[100%]">
+      <div className="container1 w-[100%] ">
         <header className=" bg-[url('./images/Poster.png')] w-full h-[50svh]">
           <div className="   flex justify-around" >
-            <div className=' flex gap-[3rem]'> <div className=' h-[3rem] '><img src={tv} alt="tv" /></div>
-              <h1 className=" text-[1.6rem]    text-white ">MovieBox </h1>
+            <div className=' flex xl:gap-[2rem] lg:gap-[2rem] md:gap-[2rem] gap-[.5rem]'> <div className=' h-[3rem] '><img src={tv} alt="tv" /></div>
+              <h1 className=" md:text-[1.6rem] xl::text-[1.6rem] text-[1rem]    text-white ">MovieBox </h1>
             </div>
               <div className=' mt-1'> 
             <SearchBar onSearch={handleSearch} /></div>
-            <div><img src={menu} alt="signIn" /></div>
+            <div className=' mt-3'><img src={menu} alt="signIn" /></div>
             <ErrorMessage />
           </div>
-          <section className=' w-[20.3rem] text-white mt-[6rem] ml-[5rem]'>
-            <h2 className=' text-[2.4rem] font-[600]'>John wick 3: Parabellum </h2>
+          <section className=' w-[20.3rem]  text-white mt-2 md:mt-[6rem] xl:mt-[6rem] ml-2  md:ml-[5rem] lg:ml-[5rem]'>
+            <h2 className=' text-[2.4rem] font-[600] '>John wick 3: Parabellum </h2>
             <p>John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
             <Link to={"https://www.google.com/search?sca_esv=564389839&sxsrf=AB5stBg1ERzbOfNNxA7uesoEBFRDNp-zsw:1694450206188&q=john+wick+3+movie+thriller&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjcj4T1_qKBAxWCUkEAHdFmD0sQ0pQJegQIDRAB&biw=1920&bih=955&dpr=1#fpstate=ive&vld=cid:baf0d1f7,vid:M7XM597XO94,st:0"}><img src={youtube} alt="youtube" /></Link>
           </section>

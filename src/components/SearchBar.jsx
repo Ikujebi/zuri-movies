@@ -13,10 +13,10 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <div className='w-[20rem] px-4 rounded border-white border-[1px] h-8  flex'>
+    <div className='md:w-[20rem] xl:w-[20rem] lg:w-[20rem] w-[9rem] px-4 rounded border-white border-[1px] h-8  flex'>
       <input
         type="text"
-        className='bg-[transparent]  text-white w-[17rem]'
+        className='bg-[transparent] md:text-[1.1rem] xl:text-[1.1rem] lg:text-[1.1rem] text-[.77rem] text-white md:w-[17rem] xl:w-[17rem] lg:w-[17rem] w-[6.4rem]'
         placeholder="Search for movies..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
