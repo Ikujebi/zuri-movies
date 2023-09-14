@@ -76,7 +76,7 @@ function MovieDetails() {
         <div className=' flex gap-3 mt-[4rem] ml-[.7rem]'><img src={logout} alt="logout" /><h2 className=' xl:text-2xl lg:text-2xl md:text-2xl text-[.9rem]'>Logout</h2></div>
       </nav>
       <div className=' w-[80%]'>
-        <div className=' mt-[.1rem] xl:w-[90%] lg:w-[90%] w-[12.9rem] md:w-[90%] rounded-md h-[46svh]'>
+        <div className=' mt-[.1rem] xl:w-[90%] lg:w-[90%] w-[12.9rem] md:w-[90%] rounded-md xl:h-[46svh] lg:h-[46svh] md:h-[46svh] h-[30svh'>
           <img src={backdropUrl} className=' h-[50svh] w-full rounded-md' alt="img" />
         </div>
         <div className=' lg:w-[73rem] xl:w-[83rem] w-10rem md:w-[44.41rem] pt-[2rem]'>
