@@ -51,7 +51,7 @@ function MovieDetails() {
 
   const backdropUrl = `https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`;
   return (
-    <div className=' poppins flex w-full'>
+    <div className=' poppins flex w-full xl:h-[100svh] lg:h-[100svh] md:h-[100svh] min-h-screen overflow-y-auto'>
       <nav className=' block h-[99.8svh] mr-[2rem] w-[20%] xl:w-[15rem] lg:w-[14rem]  w-[9.6rem] md:w-[12rem]  shadow-slate-400 shadow-lg p-4 pr-[2.9rem] rounded-e-3xl '>
         <header className=' mt-[2rem] flex gap-2 mb-[5.9rem]'><img src={tv} className=' h-[3.4rem] p-2' alt="tv" /> <h1 className=' pt-[.7rem] xl:text-2xl lg:text-2xl md:text-2xl text-[1rem] md:mr-7 font-md'>MovieBox</h1></header>
         <Link to={'/'}><div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={home} alt="home" /><h2 className=' xl:text-[1.12rem] lg:text-[1.12rem] md:text-[1.12rem] text-[.76rem]'>Home</h2></div></Link>
@@ -68,40 +68,40 @@ function MovieDetails() {
         <div className=' flex gap-3 mt-[4rem] ml-[.7rem]'><img src={logout} alt="logout" /><h2 className=' text-[1.12rem]'>Logout</h2></div>
       </nav>
       <div className=' w-[80%]'>
-        <div className=' mt-[1rem]  md:w-[90%] rounded-md'>
+        <div className=' mt-[1rem] xl:w-[90%] lg:w-[90%] w-[11rem] md:w-[90%] rounded-md h-[46svh]'>
           <img src={backdropUrl} className=' h-[50svh] w-full rounded-md' alt="img" />
         </div>
-        <div className=' lg:w-[83rem] md:w-[44.41rem]'>
+        <div className=' lg:w-[73rem] xl:w-[83rem] w-10rem md:w-[44.41rem] pt-[2rem]'>
           <section className=' flex justify-between'>
             <div className=' flex gap-1 lg:justify-between'>
-              <h2 data-testid="movie-title" className='text-lg text-2xl font-medium whitespace-no-wrap overflow-hidden overflow-ellipsis max-w-full'>{movieDetails.title} </h2>
-              <p data-testid="movie-release-date" className=' text-[1.2rem] font-medium'> . {movieDetails.release_date.slice(0, 4)}</p>
-              <p data-testid="movie-runtime" className=' text-[1.2rem] font-medium'>. {`${Math.floor(movieDetails.runtime / 60)}h ${(Math.ceil((movieDetails.runtime % 60) * 100) / 100).toFixed(2)}m`} </p>
-              <button className=' ml-[2.5rem] shadow-xl h-[2rem] text-[#B91C1C] rounded-xl p-1 text-[1rem] font-medium'>{movieDetails.genres[0].name}</button>
-              <button className=' shadow-xl h-[2rem] text-[#B91C1C]  rounded-xl p-1 text-[1rem] font-medium'>{movieDetails.genres[1].name}</button>
+              <h2 data-testid="movie-title" className='md:text-lg xl:text-2xl lg:text-2xl text-[.8rem] font-medium whitespace-no-wrap overflow-hidden overflow-ellipsis max-w-full'>{movieDetails.title} </h2>
+              <p data-testid="movie-release-date" className=' md:text-lg xl:text-2xl lg:text-2xl text-[.7rem]  font-medium'> . {movieDetails.release_date.slice(0, 4)}</p>
+              <p data-testid="movie-runtime" className=' md:text-lg xl:text-2xl lg:text-2xl text-[.7rem]  font-medium'>. {`${Math.floor(movieDetails.runtime / 60)}h ${(Math.ceil((movieDetails.runtime % 60) * 100) / 100).toFixed(2)}m`} </p>
+              <button className=' ml-[2.5rem] shadow-xl h-[2rem] text-[#B91C1C] rounded-xl p-1 md:text-lg xl:text-2xl lg:text-2xl text-[.7rem]  font-medium'>{movieDetails.genres[0].name}</button>
+              <button className=' shadow-xl h-[2rem] text-[#B91C1C]  rounded-xl p-1 md:text-lg xl:text-2xl lg:text-2xl text-[.7rem]  font-medium'>{movieDetails.genres[1].name}</button>
             </div>
             <div className=' flex md:mt-1 gap-1'>
-              <img src={star} alt="star" className=' md:h-[1.5rem] ' />
-              <p data-testid="movie-rating"> {String(movieDetails.vote_average).slice(0, 3)}</p>
-              <p data-testid="movie-votecount">|  <span className=' md:ml-3 md:pb-[2rem]'> {String(movieDetails.vote_count).slice(0, 3)}k</span> </p>
+              <img src={star} alt="star" className='  h-[1.5rem] ' />
+              <p data-testid="movie-rating" className=' md:text-lg xl:text-2xl lg:text-2xl text-[.7rem]'> {String(movieDetails.vote_average).slice(0, 3)}</p>
+              <p data-testid="movie-votecount">|  <span className=' md:text-lg xl:text-2xl lg:text-2xl text-[.7rem] md:ml-3 md:pb-[2rem]'> {String(movieDetails.vote_count).slice(0, 3)}k</span> </p>
 
             </div>
           </section>
-          <div className=' flex lg:w-[100%] md:w-[92%] mt-6 gap-3 justify-between'>
+          <div className=' flex xl:lg:w-[100%] lg:w-[100%] md:w-[92%] w-[13rem] mt-6 gap-3 justify-between'>
 
-            <p data-testid="movie-overview"  className=' lg:w-[80rem]'>{movieDetails.overview}</p>
+            <p data-testid="movie-overview"  className=' lg:w-[80rem] xl:w-[80rem] md:w-[60rem] w-[7rem] xl:text-[1.12rem] lg:text-[1.11rem] md:text-[1.11rem] text-[.5rem]'>{movieDetails.overview}</p>
             <div>
-            <button className=' flex justify-center mb-2 items-center bg-red-600 p-2 w-[15rem] rounded-xl h-12'>
+            <button className=' flex justify-center mb-2 items-center bg-red-600 p-2 border-red-500 xl:w-[15rem] lg:w-[15rem] md:w-[15rem] w-[7.2rem] rounded-xl h-12'>
               <img src={tickets} className=' w-[1.45rem]' alt="tickets" /> 
-              <span className=' ml-2 mb-[.2rem] text-white font-500 text-shadow-md '>See Showtimes</span> 
+              <span className=' ml-2 mb-[.2rem] text-white font-500 text-shadow-md xl:text-[1.12rem] lg:text-[1.12rem] md:text-[1.12rem] text-[.72rem]'>See Showtimes</span> 
               </button>
-            <button className=' flex border-[1px] justify-center items-center bg-[#BE123C1A] border-red-500 p-2 w-[15rem] rounded-xl h-12'>
+            <button className=' flex border-[1px] justify-center items-center bg-[#BE123C1A] border-red-500 p-2 xl:w-[15rem] lg:w-[15rem] md:w-[15rem] w-[7.2rem] rounded-xl h-12 xl:text-[1.12rem] lg:text-[1.12rem] md:text-[1.12rem] text-[.72rem]'>
               <img src={list} alt="list" /> More watch options
               </button>
             </div>
           </div>
           
-          <div className='flex mt-[3rem] gap-8'>
+          <div className='flex xl:mt-[3rem] lg:mt-[3rem] md:mt-[3rem] mt-[.2rem] gap-8'>
           <button className=' flex justify-center mt-10 text-white items-center bg-red-600 p-2 w-[25rem] md:w-[15rem] rounded-xl h-12 md:text-[.8rem]'>
             
               Top rated movie #65
