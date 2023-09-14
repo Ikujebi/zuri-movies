@@ -129,8 +129,8 @@ function Home() {
               <b>Press Room</b>
             </div >
             <div className=' text-gray-500 font-medium'>
-              <p className=' flex justify-center items-center mb-1'>{'\u00a9'}{year} MovieBox by Ikujebi Kehinde</p>
-              <p>{'\u00a9'}{year} MovieBox designed by Adriana Eka Prayudha</p>
+              <p className=' flex justify-center items-center mb-1 text-[.75rem] xl:text[1rem] md:text[1rem] lg:text[1rem]'>{'\u00a9'}{year} MovieBox by Ikujebi Kehinde</p>
+              <p className=' flex justify-center items-center mb-1 text-[.75rem] xl:text[1rem] md:text[1rem] lg:text[1rem]'>{'\u00a9'}{year} MovieBox designed by Adriana Eka Prayudha</p>
             </div>
           </footer>
         </div>
