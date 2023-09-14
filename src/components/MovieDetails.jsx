@@ -52,16 +52,18 @@ function MovieDetails() {
   const backdropUrl = `https://image.tmdb.org/t/p/original${movieDetails.backdrop_path}`;
   return (
     <div className=' poppins flex w-full'>
-      <nav className=' block h-[99.8svh] mr-[2rem] w-[20%] xl:w-[15rem]   shadow-slate-400 shadow-lg p-4 pr-[2.9rem] rounded-e-3xl '>
-        <header className=' mt-[2rem] flex gap-2 mb-[5.9rem]'><img src={tv} className=' h-[3.4rem] p-2' alt="tv" /> <h1 className=' pt-[.7rem] text-2xl md:mr-7 font-md'>MovieBox</h1></header>
-        <Link to={'/'}><div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={home} alt="home" /><h2 className=' text-[1.12rem]'>Home</h2></div></Link>
-        <div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={movie} alt="home" /><h2 className=' text-[1.12rem]'>Movies</h2></div>
-        <div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={tvicon} alt="home" /><h2 className=' text-[1.12rem]'>TV Series</h2></div>
-        <div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={calender} alt="home" /><h2 className=' text-[1.12rem]'>Upcoming</h2></div>
-        <div className="rounded-xl border mt-[5rem] border-red-500 bg-pink-200 p-4 bg-opacity-40">
-          <h2 className=' mx-auto'>Play movie quizes and earn free tickets</h2>
-          <p className=' text-[.76rem]'>50k people are playing now</p>
-          <button className=' bg-red-500 bg-opacity-20 text-red-600 px-3 py-1 mt-3 rounded-xl'>Start playing</button>
+      <nav className=' block h-[99.8svh] mr-[2rem] w-[20%] xl:w-[15rem] lg:w-[14rem]  w-[9.6rem] md:w-[12rem]  shadow-slate-400 shadow-lg p-4 pr-[2.9rem] rounded-e-3xl '>
+        <header className=' mt-[2rem] flex gap-2 mb-[5.9rem]'><img src={tv} className=' h-[3.4rem] p-2' alt="tv" /> <h1 className=' pt-[.7rem] xl:text-2xl lg:text-2xl md:text-2xl text-[1rem] md:mr-7 font-md'>MovieBox</h1></header>
+        <Link to={'/'}><div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={home} alt="home" /><h2 className=' xl:text-[1.12rem] lg:text-[1.12rem] md:text-[1.12rem] text-[.76rem]'>Home</h2></div></Link>
+        <div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={movie} alt="home" /><h2 className='xl:text-[1.12rem] lg:text-[1.12rem] md:text-[1.12rem] text-[.76rem]'>Movies</h2></div>
+        <div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={tvicon} alt="home" /><h2 className=' xl:text-[1.12rem] lg:text-[1.12rem] md:text-[1.12rem] text-[.76rem]'>TV Series</h2></div>
+        <div className=' flex gap-3 mt-[1rem] ml-[.7rem]'><img src={calender} alt="home" /><h2 className=' xl:text-[1.12rem] lg:text-[1.12rem] md:text-[1.12rem] text-[.76rem]'>Upcoming</h2></div>
+        <div className="rounded-xl border xl:mt-[5rem] lg:mt-[5rem] md:mt-[5rem] mt-3 border-red-500 bg-pink-200 p-4 bg-opacity-40">
+          <h2 className=' mx-auto md:text-[1.2rem] xl:text-[1.2rem] lg:text-[1.2rem] text-[.7rem]'>Play movie quizes and earn free tickets</h2>
+          <p className=' xl:text-[.76rem] lg:text-[.76rem] md:text-[.76rem] text-[.53rem]'>50k people are playing now</p>
+          <button className=' bg-red-500 bg-opacity-20 text-red-600 px-3 py-1 mt-3 rounded-xl md:text-[1.2rem] xl:text-[1.2rem] lg:text-[1.2rem] text-[.7rem]'>
+            Start playing
+            </button>
         </div>
         <div className=' flex gap-3 mt-[4rem] ml-[.7rem]'><img src={logout} alt="logout" /><h2 className=' text-[1.12rem]'>Logout</h2></div>
       </nav>
