@@ -85,7 +85,7 @@ function MovieDetails() {
               <h2 data-testid="movie-title" className=' font-medium whitespace-no-wrap overflow-hidden overflow-ellipsis max-w-full'>{movieDetails.title} </h2>
               <p data-testid="movie-release-date" className='  text-[.7rem]  font-medium'> . {movieDetails.release_date.slice(0, 4)}</p>
               <p data-testid="movie-runtime" className='   font-medium'>. {`${Math.floor(movieDetails.runtime / 60)}h ${(Math.ceil((movieDetails.runtime % 60) * 100) / 100).toFixed(2)}m`} </p>
-              <button className=' ml-[2.5rem] shadow-xl h-[2rem] text-[#B91C1C] rounded-xl p-1  font-medium'>{movieDetails.genres[0].name}</button>
+              <button className=' xl:ml-[2.5rem] lg:ml-[2.5rem] md:ml-[2.5rem] ml-[.06rem] shadow-xl h-[2rem] text-[#B91C1C] rounded-xl p-1  font-medium'>{movieDetails.genres[0].name}</button>
               <button className=' shadow-xl h-[2rem] text-[#B91C1C]  rounded-xl p-1  font-medium'>{movieDetails.genres[1].name}</button>
             </div>
             <div className=' flex md:mt-1 gap-1'>
