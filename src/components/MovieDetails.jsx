@@ -110,15 +110,15 @@ function MovieDetails() {
           </div>
 
           <div className='flex xl:mt-[3rem] lg:mt-[3rem] md:mt-[3rem] mt-0 xl:gap-8 md:gap-8 lg:gap-8 gap-2'>
-            <button className=' flex justify-center xl:mt-10 lg:mt:10 md:mt-10 mt-5 text-white items-center bg-red-600 p-2 xl:w-[25rem] lg:w-[25rem] w-[3.4rem] md:w-[15rem] rounded-xl h-12 md:text-[.8rem] xl:text-2xl lg:text-2xl text-[.56rem]'>
+            <button className=' flex justify-center xl:mt-10 lg:mt:10 md:mt-10 mt-7 text-white items-center bg-red-600 p-2 xl:w-[25rem] lg:w-[25rem] w-[3.4rem] md:w-[15rem] rounded-xl h-12 md:text-[.8rem] xl:text-2xl lg:text-2xl text-[.56rem]'>
 
               Top rated movie #65
             </button>
-            <button className=' flex border-black border-[1px] justify-center xl:mt-10 lg:mt:10 md:mt-10 mt-5 items-center bg-white p-2 xl:w-[25rem] lg:w-[25rem] w-[3.4rem] md:w-[15rem] md:text-[.8rem] xl:text-2xl lg:text-2xl text-[.56rem] rounded-xl h-12'>
+            <button className=' flex border-black border-[1px] justify-center xl:mt-10 lg:mt:10 md:mt-10 mt-7 items-center bg-white p-2 xl:w-[25rem] lg:w-[25rem] w-[3.4rem] md:w-[15rem] md:text-[.8rem] xl:text-2xl lg:text-2xl text-[.56rem] rounded-xl h-12'>
 
               Awards 9 norminations
             </button>
-            <img className=' xl:w-[25.1rem] w-[5rem] lg:w-[25.1rem] md:w-[14.57rem]  ' src={bestmovie} alt="bestmovie4september" />
+            <img className=' xl:w-[25.1rem] w-[5rem] lg:w-[25.1rem] md:w-[14.57rem] xl:mt-0 lg:mt-0 md:mt-0 mt-2 ' src={bestmovie} alt="bestmovie4september" />
           </div>
         </div></div>
     </div>
